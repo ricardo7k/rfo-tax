@@ -1,0 +1,7 @@
+google-cloud-scheduler==2.16.0
+google-api-python-client==2.134.0
+google-auth-httplib2==0.2.0
+google-auth-oauthlib==1.2.0
+google-generativeai==0.7.0
+protobuf==4.25.3
+google-auth==2.29.0
