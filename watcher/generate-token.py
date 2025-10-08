@@ -1,7 +1,18 @@
+import os
+from dotenv import load_dotenv
 from google_auth_oauthlib.flow import Flow
 
-CLIENT_ID = "586541384046-br8l2sjk5498lkrq5gpttukr5u7i3hsb.apps.googleusercontent.com"
-CLIENT_SECRET = "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"
+# Carrega as variáveis de ambiente do arquivo .env na raiz do projeto
+dotenv_path = os.path.join(os.path.dirname(__file__), '..', '.env')
+load_dotenv(dotenv_path=dotenv_path)
+
+# Carrega as credenciais a partir de variáveis de ambiente
+CLIENT_ID = os.environ.get("CLIENT_ID")
+CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+
+# Validação para garantir que as variáveis foram carregadas
+if not CLIENT_ID or not CLIENT_SECRET:
+    raise ValueError("As variáveis de ambiente CLIENT_ID e CLIENT_SECRET devem ser definidas no arquivo .env")
 
 flow = Flow.from_client_config(
     client_config={
