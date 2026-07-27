@@ -1,3 +1,5 @@
+import os
+from dotenv import load_dotenv
 from google_auth_oauthlib.flow import Flow
 
 CLIENT_ID = os.environ.get("GCP_CLIENT_GEN")
