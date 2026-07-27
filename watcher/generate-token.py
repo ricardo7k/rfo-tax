@@ -1,7 +1,7 @@
 from google_auth_oauthlib.flow import Flow
 
-CLIENT_ID = "586541384046-br8l2sjk5498lkrq5gpttukr5u7i3hsb.apps.googleusercontent.com"
-CLIENT_SECRET = "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"
+CLIENT_ID = os.environ.get("GCP_CLIENT_GEN")
+CLIENT_SECRET = os.environ.get("GCP_SECRET_GEN")
 
 flow = Flow.from_client_config(
     client_config={
