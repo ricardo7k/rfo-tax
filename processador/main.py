@@ -265,7 +265,7 @@ def processador_unificado(cloud_event):
         "refresh_token": os.environ.get("GMAIL_REFRESH_TOKEN"),
         "client_id": os.environ.get("GMAIL_CLIENT_ID"),
         "client_secret": os.environ.get("GMAIL_CLIENT_SECRET"),
-        "token_uri": "[https://oauth2.googleapis.com/token](https://oauth2.googleapis.com/token)"
+        "token_uri": "https://oauth2.googleapis.com/token"
     })
     service = build('gmail', 'v1', credentials=creds)
     label_id_map = get_label_id_map(service)
